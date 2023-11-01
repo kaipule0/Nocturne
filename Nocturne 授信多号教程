@@ -1,0 +1,9 @@
+1. 在你的设备上安装好 docker
+2. 执行 curl -o Dockerfile https://raw.githubusercontent.com/zmzimpl/nocturne-image/main/Dockerfile
+3. 执行 docker build -t noc .
+4. docker run -d --name your_name noc，替换 your_name
+5. docker exec -it your_name /bin/bash，替换  your_name
+6. xvfb-run nocturne-setup auth
+7. 在上一步会出现设备码，复制之后在已经登录了 Github 的浏览器打开 https://github.com/login/device，输入设备码，授信
+8. 授信完成后执行 xvfb-run nocturne-setup contribute
+9. 进入等待列表后再开一个窗口，重复 4-8 过程
